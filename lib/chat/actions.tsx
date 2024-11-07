@@ -97,7 +97,13 @@ Your response should be DETAILED and in BULLET POINTS.
         }))
       ]
     })
-    return response.text || ''
+    // Add actual link to the response
+    return response.text
+      ? response.text.replace(
+          /\[this link\]\(https:\/\/example\.com\/divorce-process\)/g,
+          '[this link](https://actual-link.com/divorce-process)'
+        )
+      : ''
   } catch (err) {
     return '' // Send tool use without caption.
   }
