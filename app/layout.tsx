@@ -13,11 +13,11 @@ export const metadata = {
     ? new URL(`https://${process.env.VERCEL_URL}`)
     : undefined,
   title: {
-    default: 'Apna Waqeel',
-    template: `%s - StockBot powered by Groq`
+    default: 'Apna Waqeel - Pakistan\'s first legal assistant',
+    template: `%s - Apna Waqeel - Pakistan's first legal assistant`
   },
   description:
-    'Lightning Fast AI Chatbot that Responds With Live Interactive Stock Charts, Financials, News, Screeners, and More.',
+    'Pakistan\'s first legal assistant that provides fast and reliable legal advice.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
