@@ -13,7 +13,7 @@ export const metadata = {
     ? new URL(`https://${process.env.VERCEL_URL}`)
     : undefined,
   title: {
-    default: 'StockBot powered by Groq',
+    default: 'Apna Waqeel',
     template: `%s - StockBot powered by Groq`
   },
   description:

@@ -33,34 +33,34 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What is the price',
-      subheading: 'of Apple Inc.?',
-      message: 'What is the price of Apple stock?'
+      heading: 'How to file a petition',
+      subheading: 'in the court in Pakistan?',
+      message: 'How to file a petition in the court in Pakistan?'
     },
     {
-      heading: 'Show me a stock chart',
-      subheading: 'for $GOOGL',
-      message: 'Show me a stock chart for $GOOGL'
+      heading: 'What are the requirements',
+      subheading: 'for a Pakistani passport?',
+      message: 'What are the requirements for a Pakistani passport?'
     },
     {
-      heading: 'What are some recent',
-      subheading: `events about Amazon?`,
-      message: `What are some recent events about Amazon?`
+      heading: 'How to register a company',
+      subheading: 'in Pakistan?',
+      message: 'How to register a company in Pakistan?'
     },
     {
-      heading: `What are Microsoft's`,
-      subheading: 'latest financials?',
-      message: `What are Microsoft's latest financials?`
+      heading: 'What are the labor laws',
+      subheading: 'in Pakistan?',
+      message: 'What are the labor laws in Pakistan?'
     },
     {
-      heading: 'How is the stock market',
-      subheading: 'performing today by sector?',
-      message: `How is the stock market performing today by sector?`
+      heading: 'How to apply for a',
+      subheading: 'driving license in Pakistan?',
+      message: 'How to apply for a driving license in Pakistan?'
     },
     {
-      heading: 'Show me a screener',
-      subheading: 'to find new stocks',
-      message: 'Show me a screener to find new stocks'
+      heading: 'What are the tax regulations',
+      subheading: 'for businesses in Pakistan?',
+      message: 'What are the tax regulations for businesses in Pakistan?'
     }
   ]
 

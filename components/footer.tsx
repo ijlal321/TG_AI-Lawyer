@@ -12,8 +12,8 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       )}
       {...props}
     >
-      StockBot may provide inaccurate information and does not provide
-      investment advice.
+      Apna Waqeel may provide  links to third-party websites, which are outside of our control. We are not responsible for the content of any linked site. Links to third-party websites are provided for convenience only and do not imply any endorsement of the content of the linked site.
+
     </p>
   )
 }

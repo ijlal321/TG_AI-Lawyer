@@ -11,7 +11,6 @@ import { Message, Session } from '@/lib/types'
 import { usePathname, useRouter } from 'next/navigation'
 import { useScrollAnchor } from '@/lib/hooks/use-scroll-anchor'
 import { toast } from 'sonner'
-import { TickerTape } from '@/components/tradingview/ticker-tape'
 import { MissingApiKeyBanner } from '@/components/missing-api-key-banner'
 
 export interface ChatProps extends React.ComponentProps<'div'> {
@@ -67,7 +66,7 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
       {messages.length ? (
         <MissingApiKeyBanner missingKeys={missingKeys} />
       ) : (
-        <TickerTape />
+        null
       )}
 
       <div
