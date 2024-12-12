@@ -74,3 +74,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.hover-black-button {
+  padding: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white; /* Initial background color */
+  color: black; /* Initial text color */
+  border: solid black 2px; /* Remove border */
+  border-radius: 20px; /* Optional: rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.hover-black-button:hover{
+  background-color: black; /* Background color on hover */
+  color: white; /* Text color on hover */
+}

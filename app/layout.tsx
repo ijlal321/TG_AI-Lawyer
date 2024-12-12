@@ -7,6 +7,9 @@ import { cn } from '@/lib/utils'
 import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
 import { Toaster } from '@/components/ui/sonner'
+import ChatbotPage from "@/components/chatbotScreen"
+
+
 
 export const metadata = {
   metadataBase: process.env.VERCEL_URL
@@ -46,6 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           GeistMono.variable
         )}
       >
+        {/* <ChatbotPage children={children} /> */}
         <Toaster position="top-center" />
         <Providers
           attribute="class"
@@ -54,8 +58,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           disableTransitionOnChange
         >
           <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex flex-col flex-1 bg-muted/50">{children}</main>
+            {/* <Header /> */}
+            {/* <main className="flex flex-col flex-1 bg-muted/50">{children}</main> */}
+            <ChatbotPage children={children} />
           </div>
           {/* <ThemeToggle /> */}
         </Providers>

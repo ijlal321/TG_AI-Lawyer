@@ -24,6 +24,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
+    "@uxuycom/web3-tg-sdk": "^0.1.7",
     "@vercel/og": "^0.6.2",
     "ai": "^3.2.16",
     "class-variance-authority": "^0.7.0",
