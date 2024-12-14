@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Textarea } from './textarea'
-import { MarkdownRenderer } from './MarkdownRenderer'
+// import { MarkdownRenderer } from './MarkdownRenderer'
 
 const SomeComponent: React.FC = () => {
   const [content, setContent] = React.useState('')
@@ -12,7 +12,7 @@ const SomeComponent: React.FC = () => {
         onChange={(e) => setContent(e.target.value)}
         placeholder="Type your markdown content here..."
       />
-      <MarkdownRenderer content={content} />
+      {/* <MarkdownRenderer content={content} /> */}
     </div>
   )
 }

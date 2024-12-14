@@ -9,7 +9,7 @@ import { Header } from '@/components/header'
 import { Toaster } from '@/components/ui/sonner'
 import ChatbotPage from "@/components/chatbotScreen"
 
-
+import { EthereumProvider } from "@/app/EthereumContext";
 
 export const metadata = {
   metadataBase: process.env.VERCEL_URL
@@ -42,6 +42,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <script type="text/javascript" src="https://pado-online.s3.ap-northeast-1.amazonaws.com/resources/v2/lhe.js"></script>
       <body
         className={cn(
           'font-sans antialiased',
@@ -60,7 +61,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="flex flex-col min-h-screen">
             {/* <Header /> */}
             {/* <main className="flex flex-col flex-1 bg-muted/50">{children}</main> */}
-            <ChatbotPage>{children}</ChatbotPage>
+            <EthereumProvider>
+              <ChatbotPage>{children}</ChatbotPage>
+            </EthereumProvider>
           </div>
           {/* <ThemeToggle /> */}
         </Providers>

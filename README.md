@@ -1,83 +1,121 @@
-<h2 align="center">
- <br>
- <img src="https://i.imgur.com/f1C7EdN.png" alt="AI StockBot Powered by Groq with Tool Use and Generative UI" width="250">
- <br>
- <br>
- StockBot Powered by Groq: Lightning Fast AI Chatbot that Responds With Live Interactive Stock Charts, Financials, News, Screeners, and More 
- <br>
-</h2>
+# Your AI Lawyer - Telegram Mini App Documentation
 
-<p align="center">
- <a href="#Overview">Overview</a> •
- <a href="#Features">Features</a> •
-  <a href="#Interfaces">Interfaces</a> •
- <a href="#Quickstart">Quickstart</a> •
- <a href="#Credits">Credits</a>
-</p>
+Welcome to **Your AI Lawyer**, a Telegram mini app designed to assist with legal and lawyer-related tasks while prioritizing user anonymity, security, and convenience. This document outlines the key features, functionality, and technical integrations of Your AI Lawyer.
 
-<br>
+## **Overview**
 
-[Demo of StockBot](https://github.com/user-attachments/assets/a50fa266-5ae9-4869-a37f-599d7db790d9)
-> Demo of StockBot providing relevant, live, and interactive stock charts and interfaces
+Your AI Lawyer is a Telegram-based chatbot and lawyer-matching service. It leverages Web3 technologies to ensure complete anonymity for both users and lawyers. The application provides:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbklieger-groq%2Fstockbot-on-groq&env=GROQ_API_KEY&envDescription=Get%20a%20Groq%20API%20Key&envLink=https%3A%2F%2Fconsole.groq.com%2Fkeys&project-name=stockbot-clone&repository-name=stockbot-clone&demo-title=StockBot&demo-description=Build%20a%20lightning-fast%20AI%20chatbot%20powered%20by%20Groq%20and%20Vercel%20AI%20SDK%20that%20responds%20with%20live%20stock%20charts%2C%20financials%2C%20news%2C%20and%20screeners.&demo-url=https%3A%2F%2Fgroq-stockbot.vercel.app%2F&demo-image=https%3A%2F%2Fi.imgur.com%2FjJfm8mm.png)
+1. **Anonymous Authentication via UXUY Wallet**: Users authenticate and create IDs using UXUY Wallet, a Web3 wallet designed for Telegram, ensuring complete anonymity.
+2. **AI Chatbot for Legal Queries**: Users can ask questions or seek legal advice from a specially fine-tuned AI designed for legal work.
+3. **Lawyer Matching Service**: Users can choose to connect with lawyers, either by searching for specific lawyers or receiving AI-recommended matches based on their needs.
+4. **Secure Document Sharing**: Powered by PADO’s File Sharing SDK, sensitive legal documents are securely exchanged between lawyers and clients with end-to-end encryption tied to their wallet addresses.
 
-## Overview
+Access the app via this [Telegram link](https://t.me/AI_Lawyer_Anonomus_bot/AI_Lawyer). A video demo is available [here](https://youtu.be/x9Fq3OvAFJ4).
 
-StockBot is an AI-powered chatbot that leverages Llama3 70b on Groq, Vercel’s AI SDK, and TradingView’s live widgets to respond in conversation with live, interactive charts and interfaces specifically tailored to your requests. Groq's speed makes tool calling and providing a response near instantaneous, allowing for a sequence of two API calls with separate specialized prompts to return a response.
+---
 
-> [!IMPORTANT]
->  Note: StockBot may provide inaccurate information and does not provide investment advice. It is for entertainment and instructional use only.
+## **Key Features**
 
-## Features
+### 1. **Anonymous AI Chatbot**
 
-- 🤖 **Real-time AI Chatbot**: Engage with AI powered by Llama3 70b to request stock news, information, and charts through natural language conversation
-- 📊 **Interactive Stock Charts**: Receive near-instant, context-aware responses with interactive TradingView charts that host live data
-- 🔄 **Adaptive Interface**: Dynamically render TradingView UI components for financial interfaces tailored to your specific query
-- ⚡ **Groq-Powered Performance**: Leverage Groq's cutting-edge inference technology for near-instantaneous responses and seamless user experience
-- 🌐 **Multi-Asset Market Coverage**: Access comprehensive data and analysis across stocks, forex, bonds, and cryptocurrencies
+- **Purpose**: Provide legal advice through an AI chatbot.
+- **Functionality**:
+  - Users can interact with the bot anonymously.
+  - The chatbot is fine-tuned for legal tasks and designed to answer common legal queries.
+- **Anonymity**: Users are identified only through their wallet addresses, ensuring complete privacy.
 
-## Interfaces
-| Description | Widget |
-|-------------|--------|
-| **Heatmap of Daily Market Performance**<br>Visualize market trends at a glance with an interactive heatmap. | ![Heatmap of Daily Market Performance](https://github.com/user-attachments/assets/2e3919a3-280b-4be4-adcd-a1ff636bff3e) |
-| **Breakdown of Financial Data for Stocks**<br>Get detailed financial metrics and key performance indicators for any stock. | ![Breakdown of Financial Data for Stocks](https://github.com/user-attachments/assets/c1c32dac-8295-4efb-ac1e-2eea8a89e7db) |
-| **Price History of Stock**<br>Track the historical price movement of stocks with customizable date ranges. | ![Price History of Stock](https://github.com/user-attachments/assets/f588068e-4d95-4188-96fd-866d355c993e) |
-| **Candlestick Stock Charts for Specific Assets**<br>Analyze price patterns and trends with detailed candlestick charts. | ![Candlestick Stock Charts for Specific Assets](https://github.com/user-attachments/assets/ce9ea4a8-a1fe-4ce7-be60-3f5d64d50ced) |
-| **Top Stories for Specific Stock**<br>Stay informed with the latest news and headlines affecting specific companies. | ![Top Stories for Specific Stock](https://github.com/user-attachments/assets/fa0693f4-8eca-4d5c-90e7-42afda0d8acc) |
-| **Market Overview**<br>Shows an overview of today's stock, futures, bond, and forex market performance including change values, Open, High, Low, and Close values. | ![Market Overview](https://github.com/user-attachments/assets/79048f3b-9153-41f9-8de5-6b3d45f331dd) |
-| **Stock Screener to Find New Stocks and ETFs**<br>Discover new companies with a stock screening tool. | ![Stock Screener to Find New Stocks and ETFs](https://github.com/user-attachments/assets/8ecadec9-69a1-4e18-a9fe-7b30df9f6ff5) |
-| **Trending Stocks**<br>Shows the top five gaining, losing, and most active stocks for the day. | ![Trending Stocks](https://github.com/user-attachments/assets/848c1ebf-7828-4116-a041-6f0ba7156bd5) |
-| **ETF Heatmap**<br>Shows a heatmap of today's ETF market performance across sectors and asset classes. | ![ETF Heatmap](https://github.com/user-attachments/assets/cb2b29d9-acb7-4c8f-90c7-0390e72907f6) |
+---
 
-## Quickstart
+### 2. **User and Lawyer Authentication via UXUY Wallet**
 
-> [!IMPORTANT]
-> To use StockBot, you can use a hosted version at [groq-stockbot.vercel.app](https://groq-stockbot.vercel.app/).
-> Alternatively, you can run StockBot locally using the quickstart instructions.
+- **What is UXUY Wallet?**
+  - A Web3 wallet designed specifically for Telegram, akin to MetaMask.
+  - Handles user authentication and ID creation.
+  - Ensures anonymous interaction and access.
+  - [Learn more about UXUY](https://uxuy.com/).
+- **Registration**:
+  - Users and lawyers register using their UXUY wallet addresses.
+  - Lawyers can specify their specializations and opt for anonymity.
+- **User Options**:
+  - Chat with AI or connect with a lawyer.
+  - Search for specific lawyers or receive recommendations from the AI.
+- **Lawyer Features**:
+  - Lawyers maintain a profile with specializations, ratings, and reviews.
+  - Anonymity is optional for lawyers.
 
+---
 
-You will need a Groq API Key to run the application. You can obtain one [here on the Groq console](https://console.groq.com/keys).
+### 3. **Secure File Sharing with PADO’s File Sharing SDK**
 
-To get started locally, you can run the following:
+- **Why Secure File Sharing Matters**:
+  - Legal work often involves handling sensitive and confidential documents.
+  - Ensuring that only the intended recipient can access the data is crucial.
+- **Integration with PADO**:
+  - Documents are encrypted using PADO’s File Sharing SDK.
+  - Access to files is restricted to the client’s wallet address.
+  - Even if an unauthorized individual obtains the file ID or key, they cannot access the data without the linked wallet address.
+- **Technical Details**:
+  - End-to-end encryption.
+  - Robust security tied to Web3 wallet technology.
+  - [Learn more about PADO](https://primuslabs.xyz/) or explore its [GitHub repository](https://github.com/primus-labs/pado-network-sdk/tree/main).
 
-```bash
-cp .env.example .env.local
-```
+---
 
-Add your Groq API key to .env.local, then run:
+## **Benefits**
 
-```bash
-pnpm install
-pnpm dev
-```
+### For Users:
 
-Your app should now be running on [localhost:3000](http://localhost:3000/).
+- Complete anonymity ensured by UXUY wallet authentication.
+- Flexibility to consult AI or human lawyers.
+- Secure sharing of sensitive documents.
 
-## Changelog
+### For Lawyers:
 
-See [CHANGELOG.md](CHANGELOG.md) to see the latest changes and versions. Major versions are archived.
+- Maintain anonymity if desired.
+- Connect with clients through AI-based matching or direct searches.
+- Manage reputation with ratings and reviews.
 
-## Credits
+---
 
-This app was developed by [Benjamin Klieger](https://x.com/benjaminklieger) at [Groq](https://groq.com) and uses the AI Chatbot template created by Vercel: [Github Repository](https://github.com/vercel/ai-chatbot).
+## **Technical Architecture**
+
+1. **Platform**: Telegram Mini App.
+2. **Authentication**: Powered by UXUY Wallet.
+3. **File Security**: Handled via PADO’s File Sharing SDK.
+4. **AI Model**: Fine-tuned legal chatbot for automated legal assistance.
+
+---
+
+## **Getting Started**
+
+### For Users:
+
+1. Access Your AI Lawyer via the [Telegram link](https://t.me/AI_Lawyer_Anonomus_bot/AI_Lawyer).
+2. Register with your UXUY wallet.
+3. Start chatting with the AI or search for a lawyer.
+4. Share sensitive documents securely via PADO’s File Sharing system.
+
+### For Lawyers:
+
+1. Register with your UXUY wallet.
+2. Set up your profile and specify your specializations.
+3. Choose whether to remain anonymous or public.
+4. Receive client queries and securely share documents using PADO’s File Sharing SDK.
+
+---
+
+## **External Links**
+
+- **UXUY Wallet**: [https://uxuy.com/](https://uxuy.com/)
+- **PADO SDK GitHub**: [https://github.com/primus-labs/pado-network-sdk/tree/main](https://github.com/primus-labs/pado-network-sdk/tree/main)
+- **PADO Website**: [https://primuslabs.xyz/](https://primuslabs.xyz/)
+- **Telegram Link**: [Your AI Lawyer](https://t.me/AI_Lawyer_Anonomus_bot/AI_Lawyer)
+- **Demo Video**: [YouTube Demo](https://youtu.be/x9Fq3OvAFJ4)
+
+---
+
+## **Conclusion**
+
+Your AI Lawyer is a groundbreaking Telegram mini app that integrates advanced AI, Web3 wallets, and secure data-sharing technologies to deliver an innovative legal assistance platform. By ensuring anonymity and security, it bridges the gap between clients and lawyers while protecting sensitive information.
+
